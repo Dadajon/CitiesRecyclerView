@@ -22,7 +22,6 @@
             app:cardCornerRadius="12dp"
             app:cardElevation="6dp"
             android:layout_marginTop="-30dp">
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -30,7 +29,6 @@
                 <Space
                     android:layout_width="match_parent"
                     android:layout_height="10dp" />
-
                 <TextView
                     android:id="@+id/exp_title"
                     android:layout_width="match_parent"
@@ -39,7 +37,6 @@
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat.Display2"
                     android:textColor="#000"/>
-
                 <TextView
                     android:id="@+id/exp_desc"
                     android:layout_width="match_parent"
@@ -52,26 +49,25 @@
                 <Space
                     android:layout_width="match_parent"
                     android:layout_height="20dp" />
-                <!-- Navigation bar -->
+
+
+                <!-- Details -->
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="wrap_content"
                     app:cardCornerRadius="12dp"
                     app:cardElevation="6dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Details"
-                        android:textAlignment="center"
-                        android:layout_gravity="center_vertical"/>
+
+                    
+
                 </android.support.v7.widget.CardView>
                 <Space
                     android:layout_width="match_parent"
                     android:layout_height="20dp" />
 
-                <!-- Welcome to 'city_name' -->
+                <!-- Description -->
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -124,10 +120,7 @@
                 <Space
                     android:layout_width="match_parent"
                     android:layout_height="20dp" />
-
-
             </LinearLayout>
-
         </android.support.v7.widget.CardView>
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>
