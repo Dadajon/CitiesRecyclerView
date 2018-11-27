@@ -44,12 +44,13 @@ public class ExperiencesActivity extends AppCompatActivity {
             String expTitle = bundle.getString("exp_title");
             String expDesc = bundle.getString("exp_desc");
             String expFullDesc = bundle.getString("exp_full_desc");
+            String expDetails = bundle.getString("exp_details");
 
-            setImage(expBg, expTitle, expDesc, expFullDesc);
+            setImage(expBg, expTitle, expDesc, expFullDesc, expDetails);
         }
     }
 
-    private void setImage(int expBg, String expTitle, String expDesc, String expFullDesc){
+    private void setImage(int expBg, String expTitle, String expDesc, String expFullDesc, String expDetails){
         Log.d(TAG, "setImage: setting image and name to widgets.");
 
         ImageView exp_image = findViewById(R.id.exp_image);
@@ -62,6 +63,9 @@ public class ExperiencesActivity extends AppCompatActivity {
 
         TextView exp_desc = findViewById(R.id.exp_desc);
         exp_desc.setText(expDesc);
+
+        TextView details = findViewById(R.id.details_text);
+        details.setText(expDetails);
 
         expandableTextView = findViewById(R.id.expandable_text_view);
         expandableTextView.setText(expFullDesc);

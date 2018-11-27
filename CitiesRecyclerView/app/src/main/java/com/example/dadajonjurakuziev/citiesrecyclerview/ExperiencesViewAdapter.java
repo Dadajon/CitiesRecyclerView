@@ -2,7 +2,6 @@ package com.example.dadajonjurakuziev.citiesrecyclerview;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
@@ -12,7 +11,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,7 +31,7 @@ public class ExperiencesViewAdapter extends RecyclerView.Adapter<ExperiencesView
     @NonNull
     @Override
     public ExperiencesViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(expContext).inflate(R.layout.top_experiences_layout, viewGroup, false);
+        View view = LayoutInflater.from(expContext).inflate(R.layout.layout_top_experiences, viewGroup, false);
         return new ExperiencesViewAdapter.ExperiencesViewHolder(view);
     }
 
@@ -58,6 +56,7 @@ public class ExperiencesViewAdapter extends RecyclerView.Adapter<ExperiencesView
                 intent.putExtra("exp_title", experiences.getExp_title());
                 intent.putExtra("exp_desc", experiences.getExp_desc());
                 intent.putExtra("exp_full_desc", experiences.getExp_full_desc());
+                intent.putExtra("exp_details", experiences.getDetails());
                 expContext.startActivity(intent);
             }
         });
@@ -74,6 +73,7 @@ public class ExperiencesViewAdapter extends RecyclerView.Adapter<ExperiencesView
         TextView expDesc;
         TextView expFullDesc;
         CardView expCardView;
+        TextView expDetails;
 
         public ExperiencesViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -82,6 +82,7 @@ public class ExperiencesViewAdapter extends RecyclerView.Adapter<ExperiencesView
             expDesc = itemView.findViewById(R.id.experience_desc);
             expFullDesc = itemView.findViewById(R.id.expandable_text);
             expCardView = itemView.findViewById(R.id.experience_cardView);
+            expDetails = itemView.findViewById(R.id.details_text);
         }
     }
 }
