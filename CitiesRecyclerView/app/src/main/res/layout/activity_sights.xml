@@ -5,13 +5,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SightsActivity">
+    tools:context=".SightsActivity"
+    android:orientation="vertical"
+    android:layout_gravity="center">
 
     <TextView
         android:id="@+id/sights_city"
         android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:text="Sights"/>
+    <TextView
+        android:id="@+id/sights_city_title"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sights_title"/>
 
 </LinearLayout>

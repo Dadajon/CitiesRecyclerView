@@ -41,6 +41,7 @@ public class NavButtonsViewAdapter extends RecyclerView.Adapter<NavButtonsViewAd
 
         navButtonsViewHolder.navBtnImageView.setImageResource(navButtons.getBtn_image());
         navButtonsViewHolder.btnName.setText(navButtons.getBtn_name());
+
         navButtonsViewHolder.btnCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,6 +49,7 @@ public class NavButtonsViewAdapter extends RecyclerView.Adapter<NavButtonsViewAd
 
                 if (navButtons.getBtn_name().equals("Sights")){
                     Intent intent = new Intent(navBtnContext, SightsActivity.class);
+                    intent.putExtra("sights_city_title", navButtons.getBtn_city_title());
                     navBtnContext.startActivity(intent);
                 }
                 if (navButtons.getBtn_name().equals("Restaurants")){
@@ -71,12 +73,14 @@ public class NavButtonsViewAdapter extends RecyclerView.Adapter<NavButtonsViewAd
         ImageView navBtnImageView;
         TextView btnName;
         CardView btnCardView;
+        TextView btnCityTitle;
 
         public NavButtonsViewHolder(@NonNull View itemView) {
             super(itemView);
             navBtnImageView = itemView.findViewById(R.id.nav_btn);
             btnName = itemView.findViewById(R.id.btn_name);
             btnCardView = itemView.findViewById(R.id.btn_cardView);
+            btnCityTitle = itemView.findViewById(R.id.sights_city_title);
         }
     }
 }

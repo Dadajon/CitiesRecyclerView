@@ -46,28 +46,6 @@ public class CityActivity extends AppCompatActivity {
         getIncomingIntent();
         expAdapter = new ExperiencesViewAdapter(this, experiencesList);
         expRecyclerView.setAdapter(expAdapter);
-
-
-        //NavButtons
-        navBtnRV = findViewById(R.id.nav_button_recyclerView);
-        navBtnRV.setHasFixedSize(true);
-        navBtnRV.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-        navButtonsList = new ArrayList<>();
-        List<NavButtons> navButtons = navButtonsList;
-        navButtons.add(
-                new NavButtons(1,
-                        R.drawable.sightseeing,
-                        "Sights"));
-        navButtons.add(
-                new NavButtons(1,
-                        R.drawable.paxtagulplate,
-                        "Restaurants"));
-        navButtons.add(
-                new NavButtons(1,
-                        R.drawable.map,
-                        "Map"));
-        navButtonsViewAdapter = new NavButtonsViewAdapter(this, navButtonsList);
-        navBtnRV.setAdapter(navButtonsViewAdapter);
     }
 
     private void getIncomingIntent(){
@@ -175,22 +153,118 @@ public class CityActivity extends AppCompatActivity {
                         R.drawable.exp_alisher_navoi_opera_and_ballet_theatre,
                         "Tashkent's main opera and ballet theatre is worth a visit as much for its impressive interior as its fine opera and ballet performances. Verdi and Puccini are standards, or be bold and try a Soviet Uzbek opera by Mukhtar Ashrafi. The ticket office is hidden in one of the exterior pillars.",
                         "Price : ticket 10,000 - 30,000 UZS\nAddress : Moustafa Kamoul Atatürk 28, Tashkent\nTel : (+998) 71 233 90 81\nWebsite : gabt.uz/en"));
+
+        //NavButtons
+        navBtnRV = findViewById(R.id.nav_button_recyclerView);
+        navBtnRV.setHasFixedSize(true);
+        navBtnRV.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        navButtonsList = new ArrayList<>();
+        List<NavButtons> navButtons = navButtonsList;
+        navButtons.add(
+                new NavButtons(1,
+                        R.drawable.sightseeing,
+                        "Sights",
+                        "Tashkent"));
+        navButtons.add(
+                new NavButtons(1,
+                        R.drawable.paxtagulplate,
+                        "Restaurants",
+                        "Tashkent"));
+        navButtons.add(
+                new NavButtons(1,
+                        R.drawable.map,
+                        "Map",
+                        "Tashkent"));
+        navButtonsViewAdapter = new NavButtonsViewAdapter(this, navButtonsList);
+        navBtnRV.setAdapter(navButtonsViewAdapter);
     }
 
     /**
      * Bukhara Experiences
      */
-    private void Bukhara(){ experiencesList = new ArrayList<>(); }
+    private void Bukhara(){ experiencesList = new ArrayList<>();
+        //NavButtons
+        navBtnRV = findViewById(R.id.nav_button_recyclerView);
+        navBtnRV.setHasFixedSize(true);
+        navBtnRV.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        navButtonsList = new ArrayList<>();
+        List<NavButtons> navButtons = navButtonsList;
+        navButtons.add(
+                new NavButtons(1,
+                        R.drawable.sightseeing,
+                        "Sights",
+                        "Bukhara"));
+        navButtons.add(
+                new NavButtons(1,
+                        R.drawable.paxtagulplate,
+                        "Restaurants",
+                        "Bukhara"));
+        navButtons.add(
+                new NavButtons(1,
+                        R.drawable.map,
+                        "Map",
+                        "Bukhara"));
+        navButtonsViewAdapter = new NavButtonsViewAdapter(this, navButtonsList);
+        navBtnRV.setAdapter(navButtonsViewAdapter);
+    }
 
     /**
      * Samarkand Experiences
      */
-    private void Samarkand(){ experiencesList = new ArrayList<>(); }
+    private void Samarkand(){ experiencesList = new ArrayList<>();
+        //NavButtons
+        navBtnRV = findViewById(R.id.nav_button_recyclerView);
+        navBtnRV.setHasFixedSize(true);
+        navBtnRV.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        navButtonsList = new ArrayList<>();
+        List<NavButtons> navButtons = navButtonsList;
+        navButtons.add(
+                new NavButtons(1,
+                        R.drawable.sightseeing,
+                        "Sights",
+                        "Samarkand"));
+        navButtons.add(
+                new NavButtons(1,
+                        R.drawable.paxtagulplate,
+                        "Restaurants",
+                        "Samarkand"));
+        navButtons.add(
+                new NavButtons(1,
+                        R.drawable.map,
+                        "Map",
+                        "Samarkand"));
+        navButtonsViewAdapter = new NavButtonsViewAdapter(this, navButtonsList);
+        navBtnRV.setAdapter(navButtonsViewAdapter);
+    }
 
     /**
      * Khiva Experiences
      */
-    private void Khiva(){ experiencesList = new ArrayList<>(); }
+    private void Khiva(){ experiencesList = new ArrayList<>();
+        //NavButtons
+        navBtnRV = findViewById(R.id.nav_button_recyclerView);
+        navBtnRV.setHasFixedSize(true);
+        navBtnRV.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        navButtonsList = new ArrayList<>();
+        List<NavButtons> navButtons = navButtonsList;
+        navButtons.add(
+                new NavButtons(1,
+                        R.drawable.sightseeing,
+                        "Sights",
+                        "Khiva"));
+        navButtons.add(
+                new NavButtons(1,
+                        R.drawable.paxtagulplate,
+                        "Restaurants",
+                        "Khiva"));
+        navButtons.add(
+                new NavButtons(1,
+                        R.drawable.map,
+                        "Map",
+                        "Khiva"));
+        navButtonsViewAdapter = new NavButtonsViewAdapter(this, navButtonsList);
+        navBtnRV.setAdapter(navButtonsViewAdapter);
+    }
 
     /**
      * Nukus Experiences
