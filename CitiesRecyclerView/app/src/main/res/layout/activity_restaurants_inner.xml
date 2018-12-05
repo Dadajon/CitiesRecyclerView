@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
         <ImageView
-            android:id="@+id/exp_image"
+            android:id="@+id/restaurants_inner_image"
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:scaleType="centerCrop"
@@ -31,7 +31,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="10dp" />
                 <TextView
-                    android:id="@+id/exp_title"
+                    android:id="@+id/restaurants_inner_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="City"
@@ -40,15 +40,30 @@
                     android:textColor="#000"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"/>
-                <TextView
-                    android:id="@+id/exp_desc"
-                    android:layout_width="match_parent"
+                <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Uzbekistan"
-                    android:textStyle="italic"
-                    android:textAlignment="center"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:textColor="#000"/>
+                    android:layout_gravity="center">
+                    <TextView
+                        android:id="@+id/restaurants_inner_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Uzbekistan"
+                        android:textStyle="italic"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#000"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" in Samarkand"
+                        android:textStyle="italic"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="#000"/>
+                </LinearLayout>
+
+
                 <Space
                     android:layout_width="match_parent"
                     android:layout_height="20dp" />
@@ -82,7 +97,7 @@
                             android:paddingBottom="15dp"
                             android:src="@drawable/divider" />
                         <TextView
-                            android:id="@+id/details_text"
+                            android:id="@+id/restaurants_inner_details_text"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/details_divider"
@@ -114,7 +129,7 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="30dp">
                             <TextView
-                                android:id="@+id/descriptionCard"
+                                android:id="@+id/restaurants_inner_descriptionCard"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Description"
@@ -122,7 +137,7 @@
                                 android:textSize="30sp" />
                             <ImageButton
                                 android:id="@+id/expand_collapse"
-                                android:layout_alignBottom="@id/descriptionCard"
+                                android:layout_alignBottom="@id/restaurants_inner_descriptionCard"
                                 android:layout_alignParentEnd="true"
                                 android:scaleType="fitEnd"
                                 android:layout_width="wrap_content"
@@ -132,7 +147,7 @@
                                 android:id="@+id/divider2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_below="@id/descriptionCard"
+                                android:layout_below="@id/restaurants_inner_descriptionCard"
                                 android:paddingTop="15dp"
                                 android:paddingBottom="15dp"
                                 android:src="@drawable/divider" />

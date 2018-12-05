@@ -59,9 +59,14 @@ public class CityActivity extends AppCompatActivity {
             String cityTitle = bundle.getString("city_title");
             String cityDesc = bundle.getString("city_desc");
 
+            //NavButtons
+            navBtnRV = findViewById(R.id.nav_button_recyclerView);
+            navBtnRV.setHasFixedSize(true);
+            navBtnRV.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+
             assert cityTitle != null;
             //Tashkent
-            if(cityTitle.equals("Tashkent")){ Tashkent(cityTitle); }
+            if(cityTitle.equals("Tashkent")){ Tashkent(); }
             //Bukhara
             if(cityTitle.equals("Bukhara")){ Bukhara(); }
             //Samarkand
@@ -81,7 +86,8 @@ public class CityActivity extends AppCompatActivity {
             //Shakhrisabz
             if(cityTitle.equals("Shakhrisabz")){ Shakhrisabz(); }
 
-
+            navButtonsViewAdapter = new NavButtonsViewAdapter(this, navButtonsList);
+            navBtnRV.setAdapter(navButtonsViewAdapter);
 
             setImage(cityBg, cityTitle, cityDesc);
         }
@@ -108,7 +114,7 @@ public class CityActivity extends AppCompatActivity {
     /**
      * Tashkent Experiences
      */
-    private void Tashkent(final String cityTitle){
+    private void Tashkent(){
         experiencesList = new ArrayList<>();
         final List<Experiences> exp_list = experiencesList;
         exp_list.add(
@@ -155,28 +161,26 @@ public class CityActivity extends AppCompatActivity {
                         "Price : ticket 10,000 - 30,000 UZS\nAddress : Moustafa Kamoul Atatürk 28, Tashkent\nTel : (+998) 71 233 90 81\nWebsite : gabt.uz/en"));
 
         //NavButtons
-        navBtnRV = findViewById(R.id.nav_button_recyclerView);
-        navBtnRV.setHasFixedSize(true);
-        navBtnRV.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         navButtonsList = new ArrayList<>();
         List<NavButtons> navButtons = navButtonsList;
         navButtons.add(
                 new NavButtons(1,
                         R.drawable.sightseeing,
                         "Sights",
-                        "Tashkent"));
+                        "in Tashkent",
+                        R.drawable.tashkent));
         navButtons.add(
                 new NavButtons(1,
                         R.drawable.paxtagulplate,
                         "Restaurants",
-                        "Tashkent"));
+                        "in Tashkent",
+                        R.drawable.tashkent));
         navButtons.add(
                 new NavButtons(1,
                         R.drawable.map,
                         "Map",
-                        "Tashkent"));
-        navButtonsViewAdapter = new NavButtonsViewAdapter(this, navButtonsList);
-        navBtnRV.setAdapter(navButtonsViewAdapter);
+                        "in Tashkent",
+                        R.drawable.tashkent));
     }
 
     /**
@@ -184,28 +188,26 @@ public class CityActivity extends AppCompatActivity {
      */
     private void Bukhara(){ experiencesList = new ArrayList<>();
         //NavButtons
-        navBtnRV = findViewById(R.id.nav_button_recyclerView);
-        navBtnRV.setHasFixedSize(true);
-        navBtnRV.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         navButtonsList = new ArrayList<>();
         List<NavButtons> navButtons = navButtonsList;
         navButtons.add(
                 new NavButtons(1,
                         R.drawable.sightseeing,
                         "Sights",
-                        "Bukhara"));
+                        "in Bukhara",
+                        R.drawable.bukhara));
         navButtons.add(
                 new NavButtons(1,
                         R.drawable.paxtagulplate,
                         "Restaurants",
-                        "Bukhara"));
+                        "in Bukhara",
+                        R.drawable.bukhara));
         navButtons.add(
                 new NavButtons(1,
                         R.drawable.map,
                         "Map",
-                        "Bukhara"));
-        navButtonsViewAdapter = new NavButtonsViewAdapter(this, navButtonsList);
-        navBtnRV.setAdapter(navButtonsViewAdapter);
+                        "in Bukhara",
+                        R.drawable.bukhara));
     }
 
     /**
@@ -213,28 +215,26 @@ public class CityActivity extends AppCompatActivity {
      */
     private void Samarkand(){ experiencesList = new ArrayList<>();
         //NavButtons
-        navBtnRV = findViewById(R.id.nav_button_recyclerView);
-        navBtnRV.setHasFixedSize(true);
-        navBtnRV.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         navButtonsList = new ArrayList<>();
         List<NavButtons> navButtons = navButtonsList;
         navButtons.add(
                 new NavButtons(1,
                         R.drawable.sightseeing,
                         "Sights",
-                        "Samarkand"));
+                        "in Samarkand",
+                        R.drawable.samarkand));
         navButtons.add(
                 new NavButtons(1,
                         R.drawable.paxtagulplate,
                         "Restaurants",
-                        "Samarkand"));
+                        "in Samarkand",
+                        R.drawable.samarkand));
         navButtons.add(
                 new NavButtons(1,
                         R.drawable.map,
                         "Map",
-                        "Samarkand"));
-        navButtonsViewAdapter = new NavButtonsViewAdapter(this, navButtonsList);
-        navBtnRV.setAdapter(navButtonsViewAdapter);
+                        "in Samarkand",
+                        R.drawable.samarkand));
     }
 
     /**
@@ -242,57 +242,187 @@ public class CityActivity extends AppCompatActivity {
      */
     private void Khiva(){ experiencesList = new ArrayList<>();
         //NavButtons
-        navBtnRV = findViewById(R.id.nav_button_recyclerView);
-        navBtnRV.setHasFixedSize(true);
-        navBtnRV.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         navButtonsList = new ArrayList<>();
         List<NavButtons> navButtons = navButtonsList;
         navButtons.add(
                 new NavButtons(1,
                         R.drawable.sightseeing,
                         "Sights",
-                        "Khiva"));
+                        "in Khiva",
+                        R.drawable.khiva));
         navButtons.add(
                 new NavButtons(1,
                         R.drawable.paxtagulplate,
                         "Restaurants",
-                        "Khiva"));
+                        "in Khiva",
+                        R.drawable.khiva));
         navButtons.add(
                 new NavButtons(1,
                         R.drawable.map,
                         "Map",
-                        "Khiva"));
-        navButtonsViewAdapter = new NavButtonsViewAdapter(this, navButtonsList);
-        navBtnRV.setAdapter(navButtonsViewAdapter);
+                        "in Khiva",
+                        R.drawable.khiva));
     }
 
     /**
      * Nukus Experiences
      */
-    private void Nukus(){ experiencesList = new ArrayList<>(); }
+    private void Nukus(){ experiencesList = new ArrayList<>();
+        //NavButtons
+        navButtonsList = new ArrayList<>();
+        List<NavButtons> navButtons = navButtonsList;
+        navButtons.add(
+                new NavButtons(1,
+                        R.drawable.sightseeing,
+                        "Sights",
+                        "in Nukus",
+                        R.drawable.tashkent));
+        navButtons.add(
+                new NavButtons(1,
+                        R.drawable.paxtagulplate,
+                        "Restaurants",
+                        "in Nukus",
+                        R.drawable.tashkent));
+        navButtons.add(
+                new NavButtons(1,
+                        R.drawable.map,
+                        "Map",
+                        "in Nukus",
+                        R.drawable.tashkent));
+    }
 
     /**
      * Kokand Experiences
      */
-    private void Kokand(){ experiencesList = new ArrayList<>(); }
+    private void Kokand(){ experiencesList = new ArrayList<>();
+        //NavButtons
+        navButtonsList = new ArrayList<>();
+        List<NavButtons> navButtons = navButtonsList;
+        navButtons.add(
+                new NavButtons(1,
+                        R.drawable.sightseeing,
+                        "Sights",
+                        "in Kokand",
+                        R.drawable.tashkent));
+        navButtons.add(
+                new NavButtons(1,
+                        R.drawable.paxtagulplate,
+                        "Restaurants",
+                        "in Kokand",
+                        R.drawable.tashkent));
+        navButtons.add(
+                new NavButtons(1,
+                        R.drawable.map,
+                        "Map",
+                        "in Kokand",
+                        R.drawable.tashkent));
+    }
 
     /**
      * Fergana Experiences
      */
-    private void Fergana(){ experiencesList = new ArrayList<>(); }
+    private void Fergana(){ experiencesList = new ArrayList<>();
+        //NavButtons
+        navButtonsList = new ArrayList<>();
+        List<NavButtons> navButtons = navButtonsList;
+        navButtons.add(
+                new NavButtons(1,
+                        R.drawable.sightseeing,
+                        "Sights",
+                        "in Fergana",
+                        R.drawable.tashkent));
+        navButtons.add(
+                new NavButtons(1,
+                        R.drawable.paxtagulplate,
+                        "Restaurants",
+                        "in Fergana",
+                        R.drawable.tashkent));
+        navButtons.add(
+                new NavButtons(1,
+                        R.drawable.map,
+                        "Map",
+                        "in Fergana",
+                        R.drawable.tashkent));
+    }
 
     /**
      * Termiz Experiences
      */
-    private void Termiz(){ experiencesList = new ArrayList<>(); }
+    private void Termiz(){ experiencesList = new ArrayList<>();
+        //NavButtons
+        navButtonsList = new ArrayList<>();
+        List<NavButtons> navButtons = navButtonsList;
+        navButtons.add(
+                new NavButtons(1,
+                        R.drawable.sightseeing,
+                        "Sights",
+                        "in Termiz",
+                        R.drawable.tashkent));
+        navButtons.add(
+                new NavButtons(1,
+                        R.drawable.paxtagulplate,
+                        "Restaurants",
+                        "in Termiz",
+                        R.drawable.tashkent));
+        navButtons.add(
+                new NavButtons(1,
+                        R.drawable.map,
+                        "Map",
+                        "in Termiz",
+                        R.drawable.tashkent));
+    }
 
     /**
      * Andijon Experiences
      */
-    private void Andijon(){ experiencesList = new ArrayList<>(); }
+    private void Andijon(){ experiencesList = new ArrayList<>();
+        //NavButtons
+        navButtonsList = new ArrayList<>();
+        List<NavButtons> navButtons = navButtonsList;
+        navButtons.add(
+                new NavButtons(1,
+                        R.drawable.sightseeing,
+                        "Sights",
+                        "in Andijon",
+                        R.drawable.tashkent));
+        navButtons.add(
+                new NavButtons(1,
+                        R.drawable.paxtagulplate,
+                        "Restaurants",
+                        "in Andijon",
+                        R.drawable.tashkent));
+        navButtons.add(
+                new NavButtons(1,
+                        R.drawable.map,
+                        "Map",
+                        "in Andijon",
+                        R.drawable.tashkent));
+    }
 
     /**
      * Shakhrisabz Experiences
      */
-    private void Shakhrisabz(){ experiencesList = new ArrayList<>(); }
+    private void Shakhrisabz(){ experiencesList = new ArrayList<>();
+        //NavButtons
+        navButtonsList = new ArrayList<>();
+        List<NavButtons> navButtons = navButtonsList;
+        navButtons.add(
+                new NavButtons(1,
+                        R.drawable.sightseeing,
+                        "Sights",
+                        "in Shakhrisabz",
+                        R.drawable.tashkent));
+        navButtons.add(
+                new NavButtons(1,
+                        R.drawable.paxtagulplate,
+                        "Restaurants",
+                        "in Shakhrisabz",
+                        R.drawable.tashkent));
+        navButtons.add(
+                new NavButtons(1,
+                        R.drawable.map,
+                        "Map",
+                        "in Shakhrisabz",
+                        R.drawable.tashkent));
+    }
 }

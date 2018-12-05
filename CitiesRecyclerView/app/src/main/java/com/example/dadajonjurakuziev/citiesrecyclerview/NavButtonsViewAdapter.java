@@ -45,21 +45,22 @@ public class NavButtonsViewAdapter extends RecyclerView.Adapter<NavButtonsViewAd
         navButtonsViewHolder.btnCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(navBtnContext, "Clicked on "+navButtons.getBtn_name(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(navBtnContext, "Clicked on "+navButtons.getBtn_name(), Toast.LENGTH_SHORT).show();
 
-                if (navButtons.getBtn_name().equals("Sights")){
-                    Intent intent = new Intent(navBtnContext, SightsActivity.class);
-                    intent.putExtra("sights_city_title", navButtons.getBtn_city_title());
-                    navBtnContext.startActivity(intent);
-                }
-                if (navButtons.getBtn_name().equals("Restaurants")){
-                    Intent intent = new Intent(navBtnContext, RestaurantsActivity.class);
-                    navBtnContext.startActivity(intent);
-                }
-                if (navButtons.getBtn_name().equals("Map")){
-                    Intent intent = new Intent(navBtnContext, MapActivity.class);
-                    navBtnContext.startActivity(intent);
-                }
+            if (navButtons.getBtn_name().equals("Sights")){
+                Intent intent = new Intent(navBtnContext, SightsActivity.class);
+                intent.putExtra("sights_city_title", navButtons.getBtn_city_title());
+                navBtnContext.startActivity(intent);
+            }
+            if (navButtons.getBtn_name().equals("Restaurants")){
+                Intent intent = new Intent(navBtnContext, RestaurantsActivity.class);
+                intent.putExtra("restaurants_city_title", navButtons.getBtn_city_title());
+                navBtnContext.startActivity(intent);
+            }
+            if (navButtons.getBtn_name().equals("Map")){
+                Intent intent = new Intent(navBtnContext, MapActivity.class);
+                navBtnContext.startActivity(intent);
+            }
             }
         });
     }
@@ -74,13 +75,15 @@ public class NavButtonsViewAdapter extends RecyclerView.Adapter<NavButtonsViewAd
         TextView btnName;
         CardView btnCardView;
         TextView btnCityTitle;
+        TextView btnRestaurantsCityTitle;
 
         public NavButtonsViewHolder(@NonNull View itemView) {
             super(itemView);
             navBtnImageView = itemView.findViewById(R.id.nav_btn);
             btnName = itemView.findViewById(R.id.btn_name);
             btnCardView = itemView.findViewById(R.id.btn_cardView);
-            btnCityTitle = itemView.findViewById(R.id.sights_city_title);
+            btnCityTitle = itemView.findViewById(R.id.sights_desc);
+            btnRestaurantsCityTitle = itemView.findViewById(R.id.restaurants_city);
         }
     }
 }

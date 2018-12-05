@@ -21,7 +21,9 @@
         <activity android:name=".SightseeingsActivity" />
         <activity android:name=".SightsActivity" />
         <activity android:name=".RestaurantsActivity" />
-        <activity android:name=".MapActivity"></activity>
+        <activity android:name=".MapActivity" />
+        <activity android:name=".SightsInnerActivity" />
+        <activity android:name=".RestaurantsInnerActivity"></activity>
     </application>
 
 </manifest>
