@@ -2,12 +2,8 @@ package com.example.dadajonjurakuziev.citiesrecyclerview;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.PorterDuff;
-import android.graphics.drawable.BitmapDrawable;
 import android.support.annotation.NonNull;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -17,10 +13,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.io.ByteArrayOutputStream;
 import java.util.List;
-
 import static android.content.ContentValues.TAG;
 
 public class CitiesViewAdapter extends RecyclerView.Adapter<CitiesViewAdapter.CitiesViewHolder> {

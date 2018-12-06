@@ -3,7 +3,6 @@ package com.example.dadajonjurakuziev.citiesrecyclerview;
 import android.graphics.PorterDuff;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -32,28 +31,6 @@ public class SightsInnerActivity extends AppCompatActivity {
             String sightsDesc = bundle.getString("sights_desc");
             String sightsDetails = bundle.getString("sights_details");
             String sightsFullDesc = bundle.getString("sights_full_desc");
-
-//            assert cityTitle != null;
-//            //Tashkent
-//            if(cityTitle.equals("in Tashkent")){ Tashkent(); }
-//            //Bukhara
-//            if(cityTitle.equals("in Bukhara")){ Bukhara(); }
-//            //Samarkand
-//            if(cityTitle.equals("in Samarkand")){ Samarkand(); }
-//            //Khiva
-//            if(cityTitle.equals("in Khiva")){ Khiva(); }
-//            //Nukus
-//            if(cityTitle.equals("in Nukus")){ Nukus(); }
-//            //Kokand
-//            if(cityTitle.equals("in Kokand")){ Kokand(); }
-//            //Fergana
-//            if(cityTitle.equals("in Fergana")){ Fergana(); }
-//            //Termiz
-//            if(cityTitle.equals("in Termiz")){ Termiz(); }
-//            //Andijon
-//            if(cityTitle.equals("in Andijon")){ Andijon(); }
-//            //Shakhrisabz
-//            if(cityTitle.equals("in Shakhrisabz")){ Shakhrisabz(); }
 
             setImage(sightsBG, sightsTitle, sightsDesc, sightsDetails, sightsFullDesc);
         }

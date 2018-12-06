@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.ms.square.android.expandabletextview.ExpandableTextView;
 
 public class RestaurantsInnerActivity extends AppCompatActivity {
@@ -31,28 +30,6 @@ public class RestaurantsInnerActivity extends AppCompatActivity {
             String restaurantsDesc = bundle.getString("restaurants_desc");
             String restaurantsDetails = bundle.getString("restaurants_details");
             String restaurantsFullDesc = bundle.getString("restaurants_full_desc");
-
-//            assert cityTitle != null;
-//            //Tashkent
-//            if(cityTitle.equals("in Tashkent")){ Tashkent(); }
-//            //Bukhara
-//            if(cityTitle.equals("in Bukhara")){ Bukhara(); }
-//            //Samarkand
-//            if(cityTitle.equals("in Samarkand")){ Samarkand(); }
-//            //Khiva
-//            if(cityTitle.equals("in Khiva")){ Khiva(); }
-//            //Nukus
-//            if(cityTitle.equals("in Nukus")){ Nukus(); }
-//            //Kokand
-//            if(cityTitle.equals("in Kokand")){ Kokand(); }
-//            //Fergana
-//            if(cityTitle.equals("in Fergana")){ Fergana(); }
-//            //Termiz
-//            if(cityTitle.equals("in Termiz")){ Termiz(); }
-//            //Andijon
-//            if(cityTitle.equals("in Andijon")){ Andijon(); }
-//            //Shakhrisabz
-//            if(cityTitle.equals("in Shakhrisabz")){ Shakhrisabz(); }
 
             setImage(restaurantsBG, restaurantsTitle, restaurantsDesc, restaurantsDetails, restaurantsFullDesc);
         }
