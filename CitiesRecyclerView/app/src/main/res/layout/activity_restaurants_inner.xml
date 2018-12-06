@@ -40,30 +40,16 @@
                     android:textColor="#000"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"/>
-                <LinearLayout
+                <TextView
+                    android:id="@+id/restaurants_inner_desc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center">
-                    <TextView
-                        android:id="@+id/restaurants_inner_desc"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Uzbekistan"
-                        android:textStyle="italic"
-                        android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                        android:textColor="#000"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text=" in Samarkand"
-                        android:textStyle="italic"
-                        android:textAlignment="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                        android:textColor="#000"/>
-                </LinearLayout>
-
-
+                    android:text="Uzbekistan"
+                    android:textStyle="italic"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#000"
+                    android:layout_gravity="center"/>
                 <Space
                     android:layout_width="match_parent"
                     android:layout_height="20dp" />

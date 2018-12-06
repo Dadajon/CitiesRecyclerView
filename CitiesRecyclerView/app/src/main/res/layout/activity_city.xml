@@ -139,7 +139,7 @@
                 <Space
                     android:layout_width="match_parent"
                     android:layout_height="20dp" />
-
+                
                 <!-- Top experiences in 'city' -->
                 <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
                     android:id="@+id/experience_recyclerView"
